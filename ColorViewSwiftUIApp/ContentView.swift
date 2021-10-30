@@ -43,22 +43,25 @@ struct ColorSlidersView: View {
     @Binding var blueValue: Double
     
     var body: some View {
-        VStack {
+        VStack(spacing: 25) {
             HStack {
                 Text("0")
-                Slider(value: $redValue, in: 0...1)
+                Slider(value: $redValue, in: 0...1, step: 1)
+                    .accentColor(.red)
                 Text("255")
             }
             HStack {
                 Text("0")
-                Slider(value: $greenValue, in: 0...1)
+                Slider(value: $greenValue, in: 0...1, step: 1)
+                    .accentColor(.green)
                 Text("255")
             }
             HStack {
                 Text("0")
-                Slider(value: $blueValue, in: 0...1)
+                Slider(value: $blueValue, in: 0...1, step: 1)
                 Text("255")
             }
         }
+//        .frame(height: 250)
     }
 }
