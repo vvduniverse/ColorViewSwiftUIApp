@@ -19,6 +19,17 @@ struct ColorSlidersView: View {
     
     @FocusState var isInputActive: Bool
     
+    private func valueValid(_ valueEntered: String) -> Bool {
+        var znak = false
+
+        if let value = Double(valueEntered) {
+            if value >= 0 && value <= 255 {
+                znak = true
+            }
+        }
+        return znak
+    }
+    
     var body: some View {
         VStack(spacing: 25) {
             SliderView(colorValue: $redValue, textEntered: $redValueEntered, sliderColor: .red)
@@ -28,37 +39,24 @@ struct ColorSlidersView: View {
         .toolbar {
             ToolbarItem(placement: .keyboard) {
                 Button("Done") {
-                    if ((Double(redValueEntered) != nil) &&
-                        (Double(redValueEntered)! >= 0) &&
-                        (Double(redValueEntered)! <= 255))
-                    {
+                    
+                    if valueValid(redValueEntered) {
                         redValue = Double(redValueEntered)!
                         redValueEntered = ""
-                    } else {
-                        redValueEntered = ""
-                    }
-                    if ((Double(greenValueEntered) != nil) &&
-                        (Double(greenValueEntered)! >= 0) &&
-                        (Double(greenValueEntered)! <= 255))
-                    {
+                    } else { redValueEntered = "" }
+                    
+                    if valueValid(greenValueEntered) {
                         greenValue = Double(greenValueEntered)!
                         greenValueEntered = ""
-                    } else {
-                        greenValueEntered = ""
-                    }
-                    if ((Double(blueValueEntered) != nil) &&
-                        (Double(blueValueEntered)! >= 0) &&
-                        (Double(blueValueEntered)! <= 255))
-                    {
+                    } else { greenValueEntered = "" }
+                    
+                    if valueValid(blueValueEntered) {
                         blueValue = Double(blueValueEntered)!
                         blueValueEntered = ""
-                    } else {
-                        blueValueEntered = ""
-                    }
+                    } else { blueValueEntered = "" }
                     isInputActive = false
                 }
             }
         }
     }
 }
-
