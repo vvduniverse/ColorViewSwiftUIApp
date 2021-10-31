@@ -21,7 +21,10 @@ struct ContentView: View {
     var body: some View {
         
         VStack {
-            Color(.init(red: redSlider/255, green: greenSlider/255, blue: blueSlider/255, alpha: 1.0))
+            Color(.init(red: redSlider / 255,
+                        green: greenSlider / 255,
+                        blue: blueSlider / 255,
+                        alpha: 1.0))
                 .frame(height: 200)
                 .clipShape(RoundedRectangle(cornerRadius: 16))
             HStack {
