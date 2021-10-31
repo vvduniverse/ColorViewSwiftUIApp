@@ -13,9 +13,9 @@ struct ContentView: View {
     @State private var greenSlider = Double.random(in: 0...255)
     @State private var blueSlider = Double.random(in: 0...255)
     
-    @State private var redValueC = ""
-    @State private var greenValueC = ""
-    @State private var blueValueC = ""
+    @State private var redValueSet = ""
+    @State private var greenValueSet = ""
+    @State private var blueValueSet = ""
     
     
     var body: some View {
@@ -29,7 +29,12 @@ struct ContentView: View {
                 Text("Green: \(lround(greenSlider))")
                 Text("Blue: \(lround(blueSlider))")
             }
-            ColorSlidersView(redValue: $redSlider, greenValue: $greenSlider, blueValue: $blueSlider, redValueT: $redValueC, greenValueT: $greenValueC, blueValueT: $blueValueC)
+            ColorSlidersView(redValue: $redSlider,
+                             greenValue: $greenSlider,
+                             blueValue: $blueSlider,
+                             redValueEntered: $redValueSet,
+                             greenValueEntered: $greenValueSet,
+                             blueValueEntered: $blueValueSet)
             Spacer()
         }
         .padding()
