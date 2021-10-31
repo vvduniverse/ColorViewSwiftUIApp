@@ -30,7 +30,6 @@ struct ContentView: View {
                 Text("Blue: \(lround(blueSlider))")
             }
             ColorSlidersView(redValue: $redSlider, greenValue: $greenSlider, blueValue: $blueSlider, redValueT: $redValueC, greenValueT: $greenValueC, blueValueT: $blueValueC)
-            
             Spacer()
         }
         .padding()
@@ -40,42 +39,5 @@ struct ContentView: View {
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
-    }
-}
-
-struct ColorSlidersView: View {
-    
-    @Binding var redValue: Double
-    @Binding var greenValue: Double
-    @Binding var blueValue: Double
-    
-    @Binding var redValueT: String
-    @Binding var greenValueT: String
-    @Binding var blueValueT: String
-    
-    
-    var body: some View {
-        VStack(spacing: 25) {
-            HStack {
-                Text("\(lround(redValue))")
-                Slider(value: $redValue, in: 0...255, step: 1)
-                    .accentColor(.red)
-                TextField("255", text: $redValueT)
-                    .frame(width: 30)
-            }
-            HStack {
-                Text("\(lround(greenValue))")
-                Slider(value: $greenValue, in: 0...255, step: 1)
-                    .accentColor(.green)
-                TextField("255", text: $greenValueT)
-                    .frame(width: 30)
-            }
-            HStack {
-                Text("\(lround(blueValue))")
-                Slider(value: $blueValue, in: 0...255, step: 1)
-                TextField("255", text: $blueValueT)
-                    .frame(width: 30)
-            }
-        }
     }
 }
