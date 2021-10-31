@@ -21,32 +21,9 @@ struct ColorSlidersView: View {
     
     var body: some View {
         VStack(spacing: 25) {
-            HStack {
-                Slider(value: $redValue, in: 0...255, step: 1)
-                    .accentColor(.red)
-                TextField("\(lround(redValue))", text: $redValueEntered)
-                    .textFieldStyle(.roundedBorder)
-                    .focused($isInputActive)
-                    .keyboardType(.numberPad)
-                    .frame(width: 45)
-            }
-            HStack {
-                Slider(value: $greenValue, in: 0...255, step: 1)
-                    .accentColor(.green)
-                TextField("\(lround(greenValue))", text: $greenValueEntered)
-                    .textFieldStyle(.roundedBorder)
-                    .focused($isInputActive)
-                    .keyboardType(.numberPad)
-                    .frame(width: 45)
-            }
-            HStack {
-                Slider(value: $blueValue, in: 0...255, step: 1)
-                TextField("\(lround(blueValue))", text: $blueValueEntered)
-                    .textFieldStyle(.roundedBorder)
-                    .focused($isInputActive)
-                    .keyboardType(.numberPad)
-                    .frame(width: 45)
-            }
+            SliderView(colorValue: $redValue, textEntered: $redValueEntered, sliderColor: .red)
+            SliderView(colorValue: $greenValue, textEntered: $greenValueEntered, sliderColor: .green)
+            SliderView(colorValue: $blueValue, textEntered: $blueValueEntered, sliderColor: .blue)
         }
         .toolbar {
             ToolbarItem(placement: .keyboard) {
@@ -84,3 +61,4 @@ struct ColorSlidersView: View {
         }
     }
 }
+

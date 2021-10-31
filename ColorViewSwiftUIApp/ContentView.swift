@@ -40,6 +40,9 @@ struct ContentView: View {
                              blueValueEntered: $blueValueSet)
             Spacer()
         }
+        .onTapGesture {
+            hideKeyboard()
+        }
         .padding()
     }
 }
@@ -49,3 +52,4 @@ struct ContentView_Previews: PreviewProvider {
         ContentView()
     }
 }
+

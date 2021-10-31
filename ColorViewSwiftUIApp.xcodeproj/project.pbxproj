@@ -7,7 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		A05620AC272E832E00339A03 /* SlidersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A05620AB272E832E00339A03 /* SlidersView.swift */; };
+		A05620AC272E832E00339A03 /* ColorSlidersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A05620AB272E832E00339A03 /* ColorSlidersView.swift */; };
+		A06E5919272F0990002FBC5C /* SliderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A06E5918272F0990002FBC5C /* SliderView.swift */; };
+		A06E591B272F0D3B002FBC5C /* HideKeyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = A06E591A272F0D3B002FBC5C /* HideKeyboard.swift */; };
 		A0A15214272D936A0035E4D7 /* ColorViewSwiftUIAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0A15213272D936A0035E4D7 /* ColorViewSwiftUIAppApp.swift */; };
 		A0A15216272D936A0035E4D7 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0A15215272D936A0035E4D7 /* ContentView.swift */; };
 		A0A15218272D936C0035E4D7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A0A15217272D936C0035E4D7 /* Assets.xcassets */; };
@@ -15,7 +17,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		A05620AB272E832E00339A03 /* SlidersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlidersView.swift; sourceTree = "<group>"; };
+		A05620AB272E832E00339A03 /* ColorSlidersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorSlidersView.swift; sourceTree = "<group>"; };
+		A06E5918272F0990002FBC5C /* SliderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SliderView.swift; sourceTree = "<group>"; };
+		A06E591A272F0D3B002FBC5C /* HideKeyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HideKeyboard.swift; sourceTree = "<group>"; };
 		A0A15210272D936A0035E4D7 /* ColorViewSwiftUIApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ColorViewSwiftUIApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A0A15213272D936A0035E4D7 /* ColorViewSwiftUIAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorViewSwiftUIAppApp.swift; sourceTree = "<group>"; };
 		A0A15215272D936A0035E4D7 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -55,7 +59,9 @@
 			children = (
 				A0A15213272D936A0035E4D7 /* ColorViewSwiftUIAppApp.swift */,
 				A0A15215272D936A0035E4D7 /* ContentView.swift */,
-				A05620AB272E832E00339A03 /* SlidersView.swift */,
+				A05620AB272E832E00339A03 /* ColorSlidersView.swift */,
+				A06E5918272F0990002FBC5C /* SliderView.swift */,
+				A06E591A272F0D3B002FBC5C /* HideKeyboard.swift */,
 				A0A15217272D936C0035E4D7 /* Assets.xcassets */,
 				A0A15219272D936C0035E4D7 /* Preview Content */,
 			);
@@ -140,7 +146,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A05620AC272E832E00339A03 /* SlidersView.swift in Sources */,
+				A06E591B272F0D3B002FBC5C /* HideKeyboard.swift in Sources */,
+				A05620AC272E832E00339A03 /* ColorSlidersView.swift in Sources */,
+				A06E5919272F0990002FBC5C /* SliderView.swift in Sources */,
 				A0A15216272D936A0035E4D7 /* ContentView.swift in Sources */,
 				A0A15214272D936A0035E4D7 /* ColorViewSwiftUIAppApp.swift in Sources */,
 			);
