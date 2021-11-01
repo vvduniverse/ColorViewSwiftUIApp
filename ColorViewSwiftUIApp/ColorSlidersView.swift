@@ -38,23 +38,25 @@ struct ColorSlidersView: View {
         }
         .toolbar {
             ToolbarItem(placement: .keyboard) {
-                Button("Done") {
-                    
-                    if valueValid(redValueEntered) {
-                        redValue = Double(redValueEntered)!
-                        redValueEntered = ""
-                    } else { redValueEntered = "" }
-                    
-                    if valueValid(greenValueEntered) {
-                        greenValue = Double(greenValueEntered)!
-                        greenValueEntered = ""
-                    } else { greenValueEntered = "" }
-                    
-                    if valueValid(blueValueEntered) {
-                        blueValue = Double(blueValueEntered)!
-                        blueValueEntered = ""
-                    } else { blueValueEntered = "" }
-                    isInputActive = false
+                HStack {
+                    Spacer()
+                    Button("Done") {
+                        if valueValid(redValueEntered) {
+                            redValue = Double(redValueEntered)!
+                            redValueEntered = ""
+                        } else { redValueEntered = "" }
+                        
+                        if valueValid(greenValueEntered) {
+                            greenValue = Double(greenValueEntered)!
+                            greenValueEntered = ""
+                        } else { greenValueEntered = "" }
+                        
+                        if valueValid(blueValueEntered) {
+                            blueValue = Double(blueValueEntered)!
+                            blueValueEntered = ""
+                        } else { blueValueEntered = "" }
+                        isInputActive = false
+                    }
                 }
             }
         }
