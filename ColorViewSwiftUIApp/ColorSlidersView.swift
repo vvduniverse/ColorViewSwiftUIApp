@@ -19,6 +19,8 @@ struct ColorSlidersView: View {
     
     @FocusState var isInputActive: Bool
     
+    @State private var showingAlert = false
+    
     private func valueValid(_ valueEntered: String) -> Bool {
         var znak = false
 
@@ -44,18 +46,29 @@ struct ColorSlidersView: View {
                         if valueValid(redValueEntered) {
                             redValue = Double(redValueEntered)!
                             redValueEntered = ""
-                        } else { redValueEntered = "" }
+                        } else {
+                            redValueEntered = ""
+                            showingAlert = true
+                        }
                         
                         if valueValid(greenValueEntered) {
                             greenValue = Double(greenValueEntered)!
                             greenValueEntered = ""
-                        } else { greenValueEntered = "" }
+                        } else {
+                            greenValueEntered = ""
+                            showingAlert = true
+                        }
                         
                         if valueValid(blueValueEntered) {
                             blueValue = Double(blueValueEntered)!
                             blueValueEntered = ""
-                        } else { blueValueEntered = "" }
+                        } else {
+                            blueValueEntered = ""
+                            showingAlert = true
+                        }
                         isInputActive = false
+                    }.alert(Text("Wrong data!"), isPresented: $showingAlert, actions: {})  {
+                        Text("Please enter number from 0 to 255!")
                     }
                 }
             }
